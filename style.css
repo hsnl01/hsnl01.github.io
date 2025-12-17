@@ -1,0 +1,338 @@
+/* Dark aesthetic - Gradient Theme */
+
+/* Variables */
+:root {
+    /* Background Gradients - Dark Blue Theme */
+    --bg-gradient: linear-gradient(135deg, #020617 0%, #0f172a 50%, #172554 100%);
+    --card-gradient: linear-gradient(145deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.2) 100%);
+
+    /* Text Colors */
+    --text-primary: #f0f9ff;
+    --text-secondary: #94a3b8;
+
+    /* Accents */
+    --accent-color: #38bdf8;
+    /* Sky 400 */
+    --accent-secondary: #3b82f6;
+    /* Blue 500 */
+    --badge-bg: rgba(56, 189, 248, 0.1);
+
+    /* Glows & Shadows */
+    --accent-glow: rgba(59, 130, 246, 0.25);
+    --card-shadow: 0 25px 50px -12px rgba(2, 6, 23, 0.7);
+    --border-color: rgba(56, 189, 248, 0.15);
+
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-attachment: fixed;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #38bdf8, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+}
+
+.badge-container {
+    margin-bottom: 35px;
+}
+
+.status-badge {
+    background-color: var(--badge-bg);
+    color: var(--accent-color);
+    padding: 8px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* Profile Image */
+.profile-section {
+    margin-bottom: 35px;
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    /* Space for gradient border */
+    background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #0f172a;
+    display: block;
+    border: 4px solid #020617;
+    /* Matches darkest body bg */
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.bio-summary p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Main Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-gradient);
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Subtle overlay/shimmer on card */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0.5;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Biodata List */
+.info-list {
+    list-style: none;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.info-value {
+    color: var(--text-primary);
+    text-align: right;
+    font-weight: 500;
+}
+
+.info-value a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.info-value a:hover {
+    color: var(--accent-secondary);
+}
+
+/* Education List */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Timeline vertical line connector */
+.education-list {
+    position: relative;
+}
+
+.education-list::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    /* Align with dots */
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-color), transparent);
+    opacity: 0.3;
+}
+
+.edu-item {
+    position: relative;
+    padding-left: 35px;
+    /* Space for timeline */
+}
+
+/* Dot styles */
+.edu-item::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    /* Center cutout */
+    border: 2px solid var(--accent-secondary);
+    box-shadow: 0 0 5px rgba(129, 140, 248, 0.5);
+    z-index: 2;
+}
+
+.edu-item.active::after {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.edu-school {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.edu-detail {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.edu-detail.highlight {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+/* Row-style items (SMK, SMP, SD) refined */
+.edu-content.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edu-level {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.edu-school-name {
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    body {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
