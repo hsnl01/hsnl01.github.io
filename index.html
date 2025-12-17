@@ -4,193 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Pribadi Mahasiswa</title>
-    <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Profil Husnul Khotimah</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        .container {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 600px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* Header Section */
-        header {
-            background-color: #2563eb;
-            color: white;
-            padding: 40px 20px;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .status {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Profile Image */
-        .profile-img-container {
-            margin-top: -50px;
-            margin-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #ffffff;
-            object-fit: cover;
-            background-color: #ddd;
-            /* Fallback */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Main Content */
-        .content {
-            padding: 0 30px 40px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #1f2937;
-            font-size: 1.25rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f0f2f5;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
-
-        p {
-            color: #4b5563;
-        }
-
-        /* Info List */
-        .info-list {
-            list-style: none;
-            text-align: left;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .info-item {
-            padding: 10px 0;
-            border-bottom: 1px solid #f3f4f6;
-            display: flex;
-            align-items: center;
-        }
-
-        .info-item:last-child {
-            border-bottom: none;
-        }
-
-        .info-label {
-            font-weight: 600;
-            width: 100px;
-            color: #374151;
-            flex-shrink: 0;
-        }
-
-        .info-value {
-            color: #6b7280;
-            flex-grow: 1;
-        }
-
-        a {
-            color: #2563eb;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #f9fafb;
-            padding: 20px;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.85rem;
-            color: #9ca3af;
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.75rem;
-            }
-
-            .content {
-                padding: 0 20px 30px;
-            }
-
-            .info-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .info-label {
-                margin-bottom: 4px;
-                color: #2563eb;
-            }
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <div class="container">
-        <!-- Header -->
+        <!-- Header Section -->
         <header>
             <h1 id="name">Husnul Khotimah</h1>
-            <span class="status">Mahasiswa Sistem Informasi</span>
-        </header>
+            <div class="badge-container">
+                <span class="status-badge">MAHASISWA AKTIF</span>
+            </div>
 
-        <!-- Profile Photo -->
-        <div class="profile-img-container">
-            <!-- Ganti src dengan link foto profil Anda atau file lokal -->
-            <img src="https://ui-avatars.com/api/?name=Husnul+Khotimah&background=random&size=150" alt="Foto Profil"
-                class="profile-img">
-        </div>
+            <div class="profile-section">
+                <!-- Foto Profil -->
+                <img src="https://ui-avatars.com/api/?name=Husnul+Khotimah&background=0ea5e9&color=fff&size=200&bold=true"
+                    alt="Foto Profil" class="profile-img">
+            </div>
 
-        <!-- Main Content -->
-        <div class="content">
-            <!-- About Me -->
-            <div class="section">
-                <h2>Tentang Saya</h2>
+            <div class="bio-summary">
                 <p>
                     Saya adalah mahasiswa Sistem Informasi yang tertarik mempelajari pengembangan web dan teknologi
                     informasi.
@@ -199,18 +41,45 @@
                     Website ini dibuat sebagai bagian dari tugas perkuliahan dan portofolio pribadi.
                 </p>
             </div>
+        </header>
 
-            <!-- Personal Info -->
-            <div class="section">
-                <h2>Informasi Pribadi</h2>
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+
+            <!-- Card 1: Biodata Pribadi -->
+            <div class="card biodata-card">
+                <div class="card-header">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <h2>Biodata Pribadi</h2>
+                </div>
+
                 <ul class="info-list">
                     <li class="info-item">
-                        <span class="info-label">Institusi</span>
-                        <span class="info-value">Universitas Hamzanwadi</span>
+                        <span class="info-label">Alamat</span>
+                        <span class="info-value">Reban Tebu</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Tanggal Lahir</span>
+                        <span class="info-value">20 April 2005</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Agama</span>
+                        <span class="info-value">Islam</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Status</span>
+                        <span class="info-value">Mahasiswa</span>
                     </li>
                     <li class="info-item">
                         <span class="info-label">GitHub</span>
                         <span class="info-value"><a href="https://github.com/hsnl01" target="_blank">@hsnl01</a></span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Email</span>
+                        <span class="info-value">hsnlrzy@gmail.com</span>
                     </li>
                     <li class="info-item">
                         <span class="info-label">Hobi</span>
@@ -218,22 +87,65 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Card 2: Jejak Pendidikan -->
+            <div class="card education-card">
+                <div class="card-header">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <h2>Jejak Pendidikan</h2>
+                </div>
+
+                <div class="education-list">
+                    <!-- University (Active/Highlighted) -->
+                    <div class="edu-item active">
+                        <div class="edu-marker"></div>
+                        <div class="edu-content">
+                            <h3 class="edu-school">Universitas Hamzanwadi</h3>
+                            <span class="edu-detail highlight">NIM: 240601053</span>
+                            <span class="edu-detail">Jurusan Sistem Informasi</span>
+                            <span class="edu-detail">Fakultas Teknik</span>
+                        </div>
+                    </div>
+
+                    <!-- SMK -->
+                    <div class="edu-item">
+                        <div class="edu-content row">
+                            <span class="edu-level">SMK</span>
+                            <span class="edu-school-name">SMK IT Kerongkong</span>
+                        </div>
+                    </div>
+
+                    <!-- SMP -->
+                    <div class="edu-item">
+                        <div class="edu-content row">
+                            <span class="edu-level">SMP</span>
+                            <span class="edu-school-name">SMP IT Reban Tebu</span>
+                        </div>
+                    </div>
+
+                    <!-- SD -->
+                    <div class="edu-item">
+                        <div class="edu-content row">
+                            <span class="edu-level">SD</span>
+                            <span class="edu-school-name">SDN 3 Sandubaya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Footer -->
         <footer>
-            <p>Website ini dibuat untuk tugas GitHub Pages</p>
-            <p>&copy; <span id="year"></span> | Dibuat dengan HTML & CSS</p>
+            <p>&copy; <span id="year"></span> Husnul Khotimah | Created for Github Pages</p>
         </footer>
     </div>
 
-    <script>
-        // Script sederhana untuk menampilkan tahun saat ini secara otomatis
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Konsol log sebagai tanda script berjalan
-        console.log('Website profil berhasil dimuat!');
-    </script>
+    <!-- Link External JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
