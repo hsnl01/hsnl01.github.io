@@ -19,32 +19,39 @@
 <body>
 
     <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1 id="name">Husnul Khotimah</h1>
-            <div class="badge-container">
-                <span class="status-badge">MAHASISWA AKTIF</span>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 id="name">Husnul Khotimah</h1>
+                <div class="badge-container">
+                    <span class="status-badge">MAHASISWA SISTEM INFORMASI</span>
+                </div>
+                <div class="bio-summary">
+                    <p>
+                        Saya adalah mahasiswa Sistem Informasi yang tertarik mempelajari pengembangan web dan teknologi
+                        informasi.
+                        Saat ini saya sedang mempelajari dasar-dasar HTML, CSS, JS dan penggunaan GitHub untuk publikasi
+                        website.
+                        Website ini dibuat sebagai bagian dari tugas perkuliahan dan portofolio pribadi.
+                    </p>
+                </div>
+                <!-- Optional CTA similar to reference -->
+                <div class="cta-group">
+                    <a href="#biodata" class="btn-primary">Read More <span>&longrightarrow;</span></a>
+                </div>
             </div>
 
-            <div class="profile-section">
-                <!-- Foto Profil -->
-                <img src="https://ui-avatars.com/api/?name=Husnul+Khotimah&background=0ea5e9&color=fff&size=200&bold=true"
-                    alt="Foto Profil" class="profile-img">
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <!-- Foto Profil -->
+                    <img src="profile.jpg" alt="Foto Profil" class="profile-img">
+                    <div class="name-tag">Husnul Khotimah</div>
+                </div>
             </div>
+        </section>
 
-            <div class="bio-summary">
-                <p>
-                    Saya adalah mahasiswa Sistem Informasi yang tertarik mempelajari pengembangan web dan teknologi
-                    informasi.
-                    Saat ini saya sedang mempelajari dasar-dasar HTML, CSS, dan penggunaan GitHub untuk publikasi
-                    website.
-                    Website ini dibuat sebagai bagian dari tugas perkuliahan dan portofolio pribadi.
-                </p>
-            </div>
-        </header>
-
-        <!-- Main Content Grid -->
-        <div class="main-grid">
+        <!-- Main Content (Cards) -->
+        <div class="main-grid" id="biodata">
 
             <!-- Card 1: Biodata Pribadi -->
             <div class="card biodata-card">
@@ -89,7 +96,7 @@
             </div>
 
             <!-- Card 2: Jejak Pendidikan -->
-            <div class="card education-card">
+            <div class="card education-card" id="education">
                 <div class="card-header">
                     <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
@@ -99,15 +106,12 @@
                 </div>
 
                 <div class="education-list">
-                    <!-- University (Active/Highlighted) -->
+                    <!-- University -->
                     <div class="edu-item active">
-                        <div class="edu-marker"></div>
-                        <div class="edu-content">
-                            <h3 class="edu-school">Universitas Hamzanwadi</h3>
-                            <span class="edu-detail highlight">NIM: 240601053</span>
-                            <span class="edu-detail">Jurusan Sistem Informasi</span>
-                            <span class="edu-detail">Fakultas Teknik</span>
-                        </div>
+                        <div class="edu-school">Universitas Hamzanwadi</div>
+                        <span class="edu-detail highlight">NIM: 240601053</span>
+                        <span class="edu-detail">Jurusan Sistem Informasi</span>
+                        <span class="edu-detail">Fakultas Teknik</span>
                     </div>
 
                     <!-- SMK -->
